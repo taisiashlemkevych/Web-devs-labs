@@ -1,0 +1,95 @@
+body {
+  font-family: Arial;
+  background: #f4f6f8;
+  padding: 20px;
+
+  section {
+    background: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+  }
+}
+
+.bulb {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: gray;
+  margin: 10px auto;
+  transition: .3s;
+
+  &.on {
+    background: yellow;
+    box-shadow: 0 0 40px gold;
+  }
+   &.normal.on {
+    background: yellow;
+  }
+
+  &.eco.on {
+    background: #fff3a0;
+    box-shadow: 0 0 20px #ffe680;
+  }
+
+  &.led.on {
+    background: #e6f7ff;
+    box-shadow: 0 0 50px #00ccff;
+  }
+}
+
+.traffic {
+  display: flex;
+  gap: 10px;
+}
+
+.light {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #444;
+
+  &.active {
+    &.red { background: red; }
+    &.yellow { background: yellow; }
+    &.green { background: limegreen; }
+  }
+}
+
+.clock {
+  font-size: 28px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background: #4CAF50;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+#toggleBtn { background: #2196F3; }
+#typeBtn { background: #9C27B0; }
+#brightBtn { background: #FF9800; }
+
+#manualBtn { background: #f44336; }
+
+#addProduct { background: #009688; }
+#orderProduct { background: #3F51B5; }
+
+#startTimer { background: #795548; }
