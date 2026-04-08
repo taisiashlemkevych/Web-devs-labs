@@ -1,0 +1,126 @@
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:system-ui;
+}
+
+body{
+background:#f3f5fb;
+padding:30px;
+max-width:700px;
+margin:auto;
+}
+
+header{
+text-align:center;
+margin-bottom:25px;
+}
+
+.add-task form{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+input{
+flex:1;
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+border:none;
+padding:10px 14px;
+border-radius:8px;
+cursor:pointer;
+background:#2563eb;
+color:white;
+transition:.2s;
+}
+
+button:hover{
+transform:translateY(-2px);
+}
+
+.sorting{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:15px;
+}
+
+ul{
+list-style:none;
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.task{
+background:white;
+padding:15px;
+border-radius:12px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+animation:fade .25s ease;
+}
+
+.task.completed span{
+text-decoration:line-through;
+opacity:.6;
+}
+
+.task span{
+flex:1;
+cursor:pointer;
+}
+
+.actions{
+display:flex;
+gap:8px;
+}
+
+.delete{
+background:#ef4444;
+}
+
+.edit{
+background:#10b981;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(10px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+/* TOAST */
+
+#toast{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#111;
+color:white;
+padding:12px 18px;
+border-radius:10px;
+opacity:0;
+transform:translateY(20px);
+transition:.3s;
+}
+
+#toast.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+.add-task form{
+flex-direction:column;
+}
+}

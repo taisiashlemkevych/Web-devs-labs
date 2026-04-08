@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Список товарів</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Список товарів</h1>
+  <div id="totalPrice">Загальна вартість: 0 ₴</div>
+</header>
+
+<section id="filters">
+  <button data-filter="all">Всі</button>
+  <button data-filter="Electronics">Електроніка</button>
+  <button data-filter="Clothes">Одяг</button>
+  <button data-filter="Food">Їжа</button>
+</section>
+
+<section id="sorting">
+  <button data-sort="price">За ціною</button>
+  <button data-sort="created">За створенням</button>
+  <button data-sort="updated">За оновленням</button>
+  <button id="resetSort">Скинути</button>
+</section>
+
+<p id="emptyMessage"></p>
+
+<ul id="productList"></ul>
+
+<button id="addBtn"> Додати новий товар</button>
+
+<div id="modal" class="modal hidden">
+<form id="productForm">
+
+<input required name="name" placeholder="Назва товару">
+<input required name="price" type="number" min="1" placeholder="Ціна">
+
+<select name="category" required>
+<option value="">Категорія</option>
+<option value="Electronics">Електроніка</option>
+<option value="Clothes">Одяг</option>
+<option value="Food">Їжа</option>
+</select>
+
+<input required name="image" type="url" placeholder="URL зображення">
+
+<button type="submit">Зберегти</button>
+<button type="button" id="closeModal">Закрити</button>
+
+</form>
+</div>
+
+<div id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
