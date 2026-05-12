@@ -1,0 +1,65 @@
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+.settings {
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-image: url("memory-game.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.back {
+  background: rgb(220, 217, 86);
+  transform: rotateY(180deg);
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #3d57b1;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}

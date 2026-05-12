@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Memory Game</h1>
+
+<div class="settings">
+  Рядки: <input id="rows" type="number" value="4" min="4">
+  Колонки: <input id="cols" type="number" value="4" min="4">
+
+  Складність:
+  <select id="difficulty">
+    <option value="180">Easy</option>
+    <option value="120">Normal</option>
+    <option value="60">Hard</option>
+  </select>
+
+  Гравці:
+  <select id="players">
+    <option value="1">1</option>
+    <option value="2">2</option>
+  </select>
+
+  Раунди:
+  <input id="rounds" type="number" value="1" min="1">
+
+  <br><br>
+
+  Ім'я 1: <input id="p1" value="Player 1">
+  Ім'я 2: <input id="p2" value="Player 2">
+
+  <br><br>
+
+  <button id="start">Почати гру</button>
+  <button id="reset">Скинути</button>
+</div>
+
+<h2 id="info"></h2>
+<h3 id="timer"></h3>
+
+<div id="game" class="grid"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
